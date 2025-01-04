@@ -106,6 +106,16 @@ func (q *Deque) Len() int {
 	return len(q.data)
 }
 
+// Return capacity of the deque
+func (q *Deque) Cap() int {
+	return cap(q.data)
+}
+
+// Return the state of emptiness
+func (q *Deque) IsEmpty() bool {
+	return len(q.data) == 0
+}
+
 // To clear the current deque
 func (q *Deque) Clear() {
 	q.data = make([]interface{}, 0)
